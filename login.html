@@ -1,0 +1,33 @@
+login.html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Private Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Private Site</h1>
+  <p>Enter password to continue.</p>
+
+  <input type="password" id="passwordInput" placeholder="Password">
+  <button onclick="checkPassword()">Enter</button>
+
+  <p id="errorMessage" style="color: red;"></p>
+
+  <script>
+    function checkPassword() {
+      var password = document.getElementById("passwordInput").value;
+      var correctPassword = "staycurious";  // CHANGE THIS
+
+      if (password === correctPassword) {
+        window.location.href = "home.html";
+      } else {
+        document.getElementById("errorMessage").textContent = "Incorrect password.";
+      }
+    }
+  </script>
+
+</body>
+</html>
